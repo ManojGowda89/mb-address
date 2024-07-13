@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Address Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            width: 300px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        .address-part {
+            margin: 10px 0;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 8px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .address-part span {
+            font-weight: bold;
+            width: 100px;
+        }
+        .address-part input {
+            border: none;
+            background: none;
+            font-size: 14px;
+            width: 150px;
+            margin-right: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginScreen">
+        <h1>Login</h1>
+        <input type="password" id="passwordInput" placeholder="Enter password" />
+        <button id="loginButton">Login</button>
+    </div>
+
+    <div id="mainScreen" class="hidden">
+        <h1>Random Address Generator</h1>
+        <div class="address-part">
+            <span>IP:</span> <input id="ip" readonly>
+        </div>
+        <div class="address-part">
+            <span>Street:</span> <input id="street" readonly>
+        </div>
+        <div class="address-part">
+            <span>City:</span> <input id="city" readonly>
+        </div>
+        <div class="address-part">
+            <span>State:</span> <input id="state" readonly>
+        </div>
+        <div class="address-part">
+            <span>Zip Code:</span> <input id="zip" readonly>
+        </div>
+        <div class="address-part">
+            <span>Country:</span> <input id="country" readonly>
+        </div>
+        <div id="vpnCountryDiv" class="address-part" style="display: none;">
+            <span>VPN Country:</span> <input id="vpnCountry" readonly>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <p>Powered by mb64</p>
+    </footer>
+
+    <script src="popup.js"></script>
+</body>
+</html>
